@@ -21,3 +21,19 @@
 #             break
 # print(array)
 
+# 퀵정렬
+# array = [5,7,9,0,3,1,6,2,4,8]
+#
+# def qucik_sort(array):
+#     if len(array) <=1:   # 리스트가 하나 이하의 원소를 담고 있다면 종료
+#         return array
+#
+#     pivot = array[0]
+#     tail = array[1:]
+#
+#     left_side = [x for x in tail if x <= pivot]
+#     right_side = [x for x in tail if x > pivot]
+#
+#     return qucik_sort(left_side) + [pivot] + qucik_sort(right_side)
+#
+# print(qucik_sort(array))
