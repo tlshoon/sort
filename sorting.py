@@ -1,4 +1,4 @@
-# 선택 정렬
+# 선택 정렬 : 매번 가장 작은 것을 선택
 # array = [7,5,9,0,3,1,6,2,4,8]
 #
 # for i in range(len(array)):
@@ -21,7 +21,7 @@
 #             break
 # print(array)
 
-# 퀵정렬
+# 퀵정렬 : 기준(피벗)을 사용해서 왼쪽 오른쪽 나눠서 정렬
 # array = [7,5,9,0,3,1,6,2,4,8]
 #
 # def qucik_sort(array):
@@ -34,7 +34,7 @@
 #     left_side = [x for x in tail if x <= pivot]
 #     right_side = [x for x in tail if x > pivot]
 #
-#     return qucik_sort(left_side) + [pivot] + qucik_sort(right_side)
+#     return qucik_sort(left_side) + [pivot] + qucik_sort(right_side)  # 재귀를 이용
 #
 # print(qucik_sort(array))
 
@@ -91,8 +91,8 @@
 
 # 두 배열의 원소 교체
 # n,k = map(int,input().split())
-# a = list(map(int,input().split()))
-# b = list(map(int,input().split()))
+# a = list(map(int, input().split()))
+# b = list(map(int, input().split()))
 #
 # a.sort()
 # b.sort(reverse=True)
@@ -102,5 +102,24 @@
 #         a[i],b[i] = b[i],a[i]
 #     else:
 #         break
-#
 # print(sum(a))
+
+######################## 3장 문제 ########################
+# 국영수
+# n = int(input())
+# students = []
+# for i in range(n):
+#     [name,kor,eng,math] = map(str,input().split())
+#     students.append([name,int(kor),int(eng),int(math)])
+#
+#     sorted_students = sorted(students, key = lambda x : (-x[1],x[2],-x[3],x[0]))
+#
+# for student in sorted_students:
+#     print(student[0])
+
+# 안테나
+# n = int(input())
+# location = list(map(int,input().split()))
+#
+# location.sort()
+# print(location[(n-1)//2])
